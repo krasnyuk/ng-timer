@@ -1,3 +1,13 @@
-<p>
-  timer works!
-</p>
+<div class="timer-wrapper">
+  <span class="timer-value">
+    {{currentTime | timerFormat}}
+  </span>
+  <div class="timer-buttons">
+    <button class="timer-button" appDebounceClick (debounceClick)="toggleTimer()" type="button">{{timerIsActive ? 'Stop':
+      'Start'}}
+    </button>
+    <button class="timer-button" appDebounceClick (debounceClick)="pauseTimer()" type="button">Pause</button>
+    <button class="timer-button" appDebounceClick (debounceClick)="resetTimer()" type="button">Reset</button>
+  </div>
+</div>
+

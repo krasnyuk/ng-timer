@@ -4,12 +4,16 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {TimerComponent} from './components/timer/timer.component';
+import {DebounceClickDirective} from './directives/debounce-click.directive';
+import { TimerFormatPipe } from './pipes/timer-format.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimerComponent
+    TimerComponent,
+    DebounceClickDirective,
+    TimerFormatPipe
   ],
   imports: [
     BrowserModule
